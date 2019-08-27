@@ -7,8 +7,21 @@ import router from './router'
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 
+// import store from './store'
+import Axios from 'axios'
+
+import VueParticles from 'vue-particles'
+
+
+Vue.use(VueParticles)
 Vue.use(ElementUI);
 Vue.config.productionTip = false
+
+Vue.prototype.$http = Axios;
+const token = localStorage.getItem('token')
+if (token) {
+  Vue.prototype.$http.defaults.headers.common['Authorization'] = token
+}
 
 /* eslint-disable no-new */
 new Vue({
