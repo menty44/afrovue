@@ -37,7 +37,8 @@
         </router-link>
       </el-menu-item>
 
-      <el-menu-item index="8" class="remove_decoration">
+
+      <el-menu-item index="9" class="remove_decoration">
 <!--        <span v-if="isLoggedIn"> | <a @click="logout">Logout</a></span>-->
       </el-menu-item>
 

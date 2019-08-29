@@ -12,6 +12,9 @@ import Axios from 'axios'
 
 import VueParticles from 'vue-particles'
 
+import { BulmaAccordion, BulmaAccordionItem } from 'vue-bulma-accordion'
+
+
 
 Vue.use(VueParticles)
 Vue.use(ElementUI);
@@ -23,10 +26,19 @@ if (token) {
   Vue.prototype.$http.defaults.headers.common['Authorization'] = token
 }
 
+// Vue.component(
+//   BulmaAccordion,
+//     BulmaAccordionItem
+//
+// )
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
   router,
-  components: { App },
+  components: {
+    App,
+    name: BulmaAccordion,
+    BulmaAccordionItem
+  },
   template: '<App/>'
 })

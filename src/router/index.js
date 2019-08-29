@@ -9,10 +9,12 @@ import Report from '@/components/Report'
 import Videos from '@/components/Videos'
 import Photos from '@/components/Photos'
 import Default from '@/components/Default'
+import Resetpassword from '@/components/Resetpassword'
 
 Vue.use(Router)
 
 export default new Router({
+  mode: 'history',
   routes: [
     {
       path: '/',
@@ -52,6 +54,11 @@ export default new Router({
       path: '/videos',
       name: 'Videos',
       component: Videos
+    },
+    {
+      path: '/resetpassword',
+      name: 'Resetpassword',
+      component: Resetpassword
     }
   ]
 })

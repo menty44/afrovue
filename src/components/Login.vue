@@ -5,7 +5,7 @@
     <el-col :span="12">
       <div class="grid-content bg-purple">
 <!--        <img src="../assets/logo.png">-->
-<!--        <img src="../assets/afrocover2.jpg" height="60%" width="70%">-->
+        <img src="../assets/afrocover2.jpg" height="60%" width="70%">
         <div class="imagecontainer"></div>
       </div>
     </el-col>
@@ -30,10 +30,15 @@
             <el-button @click="visible = true" type="primary" plain>Login to the Website</el-button>
           </el-col>
 
-
         </div>
 
       </el-form>
+      <el-form ref="form" :model="form" label-width="120px" style="padding-top: 12%">
+        <el-button v-on:click="reroute" style="color:red;">Forgot Password? click here to reset it
+        </el-button>
+        <p></p>
+      </el-form>
+
       <span style="padding-top: 20%">
             <small> © Developed by Blaqueyard Solutions</small>
           </span>
@@ -54,6 +59,14 @@
 
       }
     },
+    methods: {
+      reroute: function () {
+        this.$router.push('/resetpassword');
+      }
+    },
+    computed: {
+
+    }
   }
 </script>
 
